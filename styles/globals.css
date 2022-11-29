@@ -17,23 +17,44 @@ a {
 }
 
 .main-container{
-max-width: 1400px; 
-margin: auto;
-width: 100%;
-
-}
-.layout{
-  padding: 10px;
+  max-width: 1400px; 
+  margin: auto;
+  width: 100%;
 }
 
 .navbar-container{
   display: flex;
-  justify-content: space-between;
-  margin: 6px 18px;
+  flex-direction: column;
   position: relative;
+}
+
+.navbar-bottom {
   width: 100%;
   max-width: 1330px;
   margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-top {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.navbar-top-wrapper {
+  max-width: 1330px;
+  margin: 10px auto;
+}
+
+.navbar-slide-item {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.navbar-slide-item p {
+  margin-left: 10px !important;
 }
 
 .categories {
@@ -153,30 +174,64 @@ width: 100%;
   color: black;
 }
 
-.hero-banner-container{
-  padding: 100px 40px;
-  background-color: #dcdcdc;
+.hero-banner-container {
+  background-color: white;
   border-radius: 15px;
   position: relative;
-  height: 500px;
   line-height: 0.9; 
   width: 100%;
+}
+
+.hero-banner-container .slick-slide > div > span {
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+.categories-row-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories-title {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+} 
+
+.categories-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.categories-row-item {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.categories-row-item p {
+  text-align: center;
+  font-weight: 500;
 }
 
 .hero-banner-container .beats-solo{
   font-size: 20px;
 }
-.hero-banner-container button{
-  border-radius: 15px;
-  padding: 10px 16px;
-  background-color: #f02d34;
-  color: white;
-  border: none;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  z-index:10000 !important;
+
+.slick-arrow.slick-prev {
+  left: 20px;
+  z-index: 1;
+}
+
+.slick-arrow.slick-next {
+  right: 20px;
+  z-index: 1;
 }
 
 .hero-banner-container h3{
