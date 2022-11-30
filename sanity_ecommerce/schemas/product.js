@@ -27,8 +27,13 @@ export default {
       }
     },
     { 
-      name: 'price',
-      title: 'Price',
+      name: 'listPrice',
+      title: 'List Price',
+      type: 'number',
+    },
+    { 
+      name: 'bestPrice',
+      title: 'Best Price',
       type: 'number',
     },
     { 
