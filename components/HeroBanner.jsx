@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+const isMobile = typeof window !== "undefined" && window.innerWidth < 1024
+
 
 const HeroBanner = () => {
   const settings = {
@@ -22,23 +24,23 @@ const HeroBanner = () => {
       <Slider {...settings}>
         <Link href="/">
           <Image
-            width={1280}
-            height={450}
-            src='/assets/banner-desktop.jpg'
+            width={`${isMobile ? 640: 450}`}
+            height={`${isMobile ? 785: 450}`}
+            src={`${isMobile ? '/assets/banner-mobile.jpg' : '/assets/banner-desktop.jpg'}`}
           />
         </Link>
         <Link href="/">
           <Image
-            width={1280}
-            height={450}
-            src='/assets/banner-desktop.jpg'
+            width={`${isMobile ? 640: 450}`}
+            height={`${isMobile ? 785: 450}`}
+            src={`${isMobile ? '/assets/banner-mobile.jpg' : '/assets/banner-desktop.jpg'}`}
           />
         </Link>
         <Link href="/">
           <Image
-            width={1280}
-            height={450}
-            src='/assets/banner-desktop.jpg'
+            width={`${isMobile ? 640: 450}`}
+            height={`${isMobile ? 785: 450}`}
+            src={`${isMobile ? '/assets/banner-mobile.jpg' : '/assets/banner-desktop.jpg'}`}
           />
         </Link>
       </Slider>

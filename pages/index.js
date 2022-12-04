@@ -8,6 +8,8 @@ import CategoriesRow from '../components/CategoriesRow';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
+
 const Home = ({ products, bannerData }) => {
 
   const settings = {
@@ -57,22 +59,22 @@ const Home = ({ products, bannerData }) => {
     <div className='banner-destaque'>
       <Image
         alt=""
-        width={465}
-        height={375}
-        src='/assets/banner-destaque-1.jpg'
+        width={`${isMobile ? 640 : 465}`}
+        height={`${isMobile ? 300 : 173}`}
+        src={`${isMobile ? '/assets/banner-destaque-mobile-1.jpg': '/assets/banner-destaque-1.jpg'}`}
       />
       <div className='banner-destaque-column'>
         <Image
           alt=""
-          width={475}
-          height={173}
-          src='/assets/banner-destaque-2.jpg'
+          width={`${isMobile ? 640 : 465}`}
+          height={`${isMobile ? 300 : 173}`}
+          src={`${isMobile ? '/assets/banner-destaque-mobile-2.jpg': '/assets/banner-destaque-1.jpg'}`}
         />
         <Image
           alt=""
-          width={475}
-          height={173}
-          src='/assets/banner-destaque-3.jpg'
+          width={`${isMobile ? 640 : 465}`}
+          height={`${isMobile ? 300 : 173}`}
+          src={`${isMobile ? '/assets/banner-destaque-mobile-3.jpg': '/assets/banner-destaque-1.jpg'}`}
         />
       </div>
     </div>

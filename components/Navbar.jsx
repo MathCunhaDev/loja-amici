@@ -10,6 +10,8 @@ import { FaTruck, FaCreditCard, FaSyncAlt, FaLock } from "react-icons/fa";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
+
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
@@ -58,13 +60,19 @@ const Navbar = () => {
           />
         </Link>
 
-        <div className="categories">
-          <a href="#" className='category'>Bermudas</a>
-          <a href="#" className='category'>Calças</a>
-          <a href="#" className='category'>Regatas</a>
-          <a href="#" className='category'>Tops</a>
-          <a href="#" className='category'>Contato</a>
-        </div>
+        {
+          !isMobile ?? (
+            <div className="categories">
+              <a href="#" className='category'>Bermudas</a>
+              <a href="#" className='category'>Calças</a>
+              <a href="#" className='category'>Regatas</a>
+              <a href="#" className='category'>Tops</a>
+              <a href="#" className='category'>Contato</a>
+            </div>
+          )
+        
+        }
+        
 
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
           <AiOutlineShopping />
