@@ -1,9 +1,7 @@
-# Sanity Clean Content Studio
+# Loja Amici
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+## Loja desenvolvida como projeto para as matérias de Plano de Marketing e Programação para ambientes Multimida 2
 
-Now you can do the following things:
+Esse projeto foi desenvolvido com NextJS no Front-end e SanityIO para criar os dados estruturados que representam os produtos, banners e etc.
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+Juntando os dois, nós podemos ter um "mini" back-end diretamente no front-end. Isso faz com que o carregamento das páginas e dos produtos seja muito mais rápido. 
