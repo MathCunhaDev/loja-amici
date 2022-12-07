@@ -61,7 +61,9 @@ const Navbar = () => {
         </Link>
 
         {
-          !isMobile ?? (
+          isMobile ? (
+            <div className="categories"></div>
+          ) : (
             <div className="categories">
               <a href="#" className='category'>Bermudas</a>
               <a href="#" className='category'>Calças</a>
